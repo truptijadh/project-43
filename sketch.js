@@ -13,6 +13,12 @@ var gameState=1
 function preload(){
   gunImg = loadImage("gun1.png")
   blastImg = loadImage("blast.png")
+  // blastImg = Image("blast.png")
+   // blastImg = LoadImage("blast.png")
+    // blastImg = loadImage("blast.jpg")
+
+
+
   bulletImg = loadImage("bullet1.png")
   blueBubbleImg = loadImage("waterBubble.png")
   redBubbleImg = loadImage("redbubble.png")
@@ -115,16 +121,16 @@ function handleBubbleCollision(bubbleGroup){
     }
 
    blast= createSprite(bullet.x+60, bullet.y, 50,50);
-    blast.addImage(blastImg)
-
-     blast= sprite(bullet.x+60, bullet.y, 50,50);
    blast.addImage(blastImg)
 
-  blast= createSprite(bullet.x+60, bullet.y, 50,50);
-    blast.addImage(blastImg)
+   //  blast= sprite(bullet.x+60, bullet.y, 50,50);
+   // blast.addImage(blastImg)
 
-    blast= createSprite(bullet.x+60, bullet.y, 50,50);
-   image(blastImg)
+   //  blast= createSprite(bullet.x+60, bullet.y, 50,50);
+   // blast.addImage(blastImg)
+
+   //  blast= createSprite(bullet.x+60, bullet.y, 50,50);
+   // image(blastImg)
 
 
    blast.scale=0.3
@@ -137,14 +143,7 @@ function handleGameover(bubbleGroup){
   
     life=life-1;
     bubbleGroup.destroyEach();
-     life=life+1;
-    bubbleGroup.destroyEach();
-
-     life=life-1;
-    bubbleGroup.destroy();
-
-     life=life-1;
-    bubble.destroyEach();
+    
 
     if (life === 0) {
       gameState=2
